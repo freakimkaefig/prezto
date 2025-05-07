@@ -17,8 +17,8 @@ eval "$(jump shell)"
 
 alias man='tldr'
 alias cat='bat'
-alias ls='exa'
-alias ll='exa -l'
+alias ls='eza'
+alias ll='eza -l'
 alias f='fzf --preview "bat --color \"always\" {}"'
 alias top='glances'
 eval $(thefuck --alias)
