@@ -39,8 +39,8 @@ export HOMEBREW_OPT="/opt/homebrew/opt"
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # R
 export PATH="/opt/R/arm64/bin:${PATH}"
@@ -61,3 +61,18 @@ export PATH="$PATH:$USER_APPS/flutter/bin"
 # Google Cloud CLI
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+# GPG
+export GPG_TTY=$(tty)
+
+# Node
+NODE_EXTRA_CA_CERTS=/etc/ssl/certs/local-ca-fullchain.pem
+
+# Bitwarden
+export BW_SESSION="zt8gmk3Y8CvuPvCjQuV0U69h/bcJIxCDwo6q7AcuW1CundyJE6ZFdqws2IJRL0Cde5sjpYgrj/yn8lPyVl5HCg=="
+
+## Ffmpeg 6
+export PATH="/opt/homebrew/opt/ffmpeg@6/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
