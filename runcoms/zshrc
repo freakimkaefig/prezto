@@ -26,6 +26,8 @@ alias fu='fuck'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export GPG_TTY=$(tty)
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -46,8 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/opt/R/arm64/bin:${PATH}"
 
 # Java
-export JAVA_HOME="$HOMEBREW_OPT/openjdk@11/"
-export PATH="$JAVA_HOME:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # Python
 eval "$(pyenv init --path)"
