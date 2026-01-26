@@ -34,6 +34,7 @@ export LANG=en_US.UTF-8
 # Custom scripts in home
 export USER_APPS="$HOME/Applications"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
@@ -72,8 +73,15 @@ NODE_EXTRA_CA_CERTS=/etc/ssl/certs/local-ca-fullchain.pem
 # Bitwarden
 export BW_SESSION="zt8gmk3Y8CvuPvCjQuV0U69h/bcJIxCDwo6q7AcuW1CundyJE6ZFdqws2IJRL0Cde5sjpYgrj/yn8lPyVl5HCg=="
 
-## Ffmpeg 6
+# Ffmpeg 6
 export PATH="/opt/homebrew/opt/ffmpeg@6/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/llamm/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
